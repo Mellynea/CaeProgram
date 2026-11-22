@@ -2,10 +2,6 @@
 
 <p align="center"><a href="../README.md">English</a> | <a href="README.zh-CN.md">中文简体</a> | <a href="README.zh-TW.md">中文繁體</a> | <strong>日本語</strong> | <a href="README.ko.md">한국어</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.de.md">Deutsch</a></p>
 
-https://github.com/user-attachments/assets/0aa8ea54-37b5-4109-b15d-543e4fc63c19
-
-https://github.com/user-attachments/assets/b7831d49-4c18-4f0f-940b-68d78249b736
-
 ## v1.2 の制作機能
 
 建築プレビューに実際の 3D ブロックによる素材数、最大寸法、階層ごとの断面表示、一人称の飛行見学を追加。AI 建築では自分の API キーを使い、文章と参考画像から建物を作成して繰り返し修正できます。AI パーティクル設計ではネイティブの粒子と軌道をプレビューし、独立した CPS1 設定コードを生成できます。すべての AI ワークスペースで画像を送信できます。画像は選択した接続先だけに送られ、認証情報と画像は共有設定に含まれません。AI Control は現在のプレイヤーの権限に従ってサーバーでも使用できます。

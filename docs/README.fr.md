@@ -2,10 +2,6 @@
 
 <p align="center"><a href="../README.md">English</a> | <a href="README.zh-CN.md">中文简体</a> | <a href="README.zh-TW.md">中文繁體</a> | <a href="README.ja.md">日本語</a> | <a href="README.ko.md">한국어</a> | <a href="README.es.md">Español</a> | <strong>Français</strong> | <a href="README.de.md">Deutsch</a></p>
 
-https://github.com/user-attachments/assets/0aa8ea54-37b5-4109-b15d-543e4fc63c19
-
-https://github.com/user-attachments/assets/b7831d49-4c18-4f0f-940b-68d78249b736
-
 ## Création dans la v1.2
 
 L’aperçu des bâtiments affiche de vrais blocs 3D avec noms et quantités, les dimensions maximales, une analyse par étage et une visite en vol à la première personne. L’architecte IA utilise votre propre clé API pour créer et modifier des bâtiments à partir de texte et d’images. Le concepteur de particules produit des compositions natives et des trajectoires, avec aperçu et code CPS1 indépendant. Tous les espaces IA acceptent des images, envoyées uniquement au point de connexion choisi. Les identifiants et images sont exclus des configurations partagées. AI Control fonctionne aussi sur les serveurs dans les limites des permissions du joueur actuel.

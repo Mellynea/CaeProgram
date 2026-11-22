@@ -2,10 +2,6 @@
 
 <p align="center"><a href="../README.md">English</a> | <a href="README.zh-CN.md">中文简体</a> | <a href="README.zh-TW.md">中文繁體</a> | <a href="README.ja.md">日本語</a> | <a href="README.ko.md">한국어</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <strong>Deutsch</strong></p>
 
-https://github.com/user-attachments/assets/0aa8ea54-37b5-4109-b15d-543e4fc63c19
-
-https://github.com/user-attachments/assets/b7831d49-4c18-4f0f-940b-68d78249b736
-
 ## Kreativfunktionen in v1.2
 
 Die Gebäudevorschau zeigt echte 3D-Blöcke mit Namen und Mengen, maximale Abmessungen, einzelne horizontale Ebenen und einen Rundgang mit freiem Flug in der Ich-Perspektive. Der KI-Architekt erstellt und überarbeitet Gebäude mit deinem eigenen API-Schlüssel anhand von Text und Referenzbildern. Der Partikeldesigner erzeugt native Partikel und Bewegungspfade mit Vorschau und eigenem CPS1-Konfigurationscode. Alle KI-Arbeitsbereiche unterstützen Bilder. Sie werden nur an den ausgewählten Endpunkt gesendet; Zugangsdaten und Bilder gehören nicht zu geteilten Konfigurationen. AI Control ist auch auf Servern im Rahmen der Rechte des aktuellen Spielers nutzbar.

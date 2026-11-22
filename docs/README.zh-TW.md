@@ -2,10 +2,6 @@
 
 <p align="center"><a href="../README.md">English</a> | <a href="README.zh-CN.md">中文简体</a> | <strong>中文繁體</strong> | <a href="README.ja.md">日本語</a> | <a href="README.ko.md">한국어</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.de.md">Deutsch</a></p>
 
-https://github.com/user-attachments/assets/0aa8ea54-37b5-4109-b15d-543e4fc63c19
-
-https://github.com/user-attachments/assets/b7831d49-4c18-4f0f-940b-68d78249b736
-
 ## v1.2 創作更新
 
 建築預覽新增真實 3D 方塊材料統計、最大長寬高、逐層剖析與第一人稱飛行參觀。AI 建築可使用自己的 API Key，根據文字及參考圖產生完整建築並持續修改。AI 粒子設計可產生原生粒子與運動路徑，提供預覽及獨立 CPS1 配置碼。所有 AI 工作區均支援傳送圖片，圖片只傳送至選定的接口，憑據及圖片不會進入分享配置。AI 控制也可用於伺服器，並遵循目前玩家的權限。

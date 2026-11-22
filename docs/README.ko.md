@@ -2,10 +2,6 @@
 
 <p align="center"><a href="../README.md">English</a> | <a href="README.zh-CN.md">中文简体</a> | <a href="README.zh-TW.md">中文繁體</a> | <a href="README.ja.md">日本語</a> | <strong>한국어</strong> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.de.md">Deutsch</a></p>
 
-https://github.com/user-attachments/assets/0aa8ea54-37b5-4109-b15d-543e4fc63c19
-
-https://github.com/user-attachments/assets/b7831d49-4c18-4f0f-940b-68d78249b736
-
 ## v1.2 창작 기능
 
 건축 미리보기에 실제 3D 블록 재료 수량, 최대 크기, 층별 단면 분석 및 1인칭 비행 관람을 추가했습니다. AI 건축은 자신의 API 키로 텍스트와 참고 이미지를 사용해 건축물을 생성하고 반복 수정합니다. AI 입자 설계는 실제 입자와 경로를 미리 보고 독립 CPS1 설정 코드를 생성합니다. 모든 AI 작업 공간에서 이미지를 첨부할 수 있습니다. 이미지는 선택한 엔드포인트에만 전송되며 인증 정보와 이미지는 공유 설정에 포함되지 않습니다. AI Control은 현재 플레이어의 권한에 따라 서버에서도 사용할 수 있습니다.
