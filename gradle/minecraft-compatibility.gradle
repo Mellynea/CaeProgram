@@ -33,6 +33,10 @@ if (!layers.isEmpty()) {
         duplicatesStrategy = DuplicatesStrategy.EXCLUDE
         layers.reverseEach { from new File(it, 'java') }
         from 'src/main/java'
+        if (!(targetVersion in ['1.20.1', '1.20.4'])) {
+            exclude 'com/cheatprogram/compat/legacy/LegacyNativeBuffer.java'
+            exclude 'com/cheatprogram/mixin/LegacyBufferAccessor.java'
+        }
         if (targetVersion == '26.3') {
             def relocationFile = file('versions/unobfuscated-26.3/relocations.json')
             inputs.file relocationFile

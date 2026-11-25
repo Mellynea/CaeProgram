@@ -1,5 +1,7 @@
 # CaeDuex
 
+Current corrective release: [v1.3fix](https://github.com/Mellynea/CaeProgram/releases/tag/v1.3fix). See the [release notes](docs/releases/v1.3fix.md) for fixes and validation.
+
 <p align="center"><strong>English</strong> | <a href="docs/README.zh-CN.md">中文简体</a> | <a href="docs/README.zh-TW.md">中文繁體</a> | <a href="docs/README.ja.md">日本語</a> | <a href="docs/README.ko.md">한국어</a> | <a href="docs/README.es.md">Español</a> | <a href="docs/README.fr.md">Français</a> | <a href="docs/README.de.md">Deutsch</a></p>
 
 A customizable Minecraft client with separate Fabric, Forge, and NeoForge builds that brings application screens, spatial sound, particle scenes, and creative tools into your world. Build a space that feels like your own, then share your creations through configuration codes.
@@ -68,7 +70,7 @@ Connect a compatible model endpoint to direct bounded actions in your single-pla
 3. Launch Minecraft and press **Right Shift** to open the control panel. You can assign another key in settings.
 4. Enable the features you want, adjust their settings, and save a profile.
 
-Project version: **v1.3**. Local builds use the filename `caeduex-v1.3-<loader>-mc<Minecraft version>.jar`. Install one matching build at a time. See the [CaeDuex release notes](docs/releases/caeduex-v1.3.md) for release details and upgrading.
+Project version: **v1.3fix**. Local builds use the filename `caeduex-v1.3fix-<loader>-mc<Minecraft version>.jar`. Install one matching build at a time. See the [v1.3fix release notes](docs/releases/v1.3fix.md) for fixes and upgrading.
 
 | Loader | Minecraft with Java 21 or newer | Minecraft with Java 25 or newer |
 | --- | --- | --- |

@@ -192,15 +192,43 @@ public final class BuildingModelPreview implements AutoCloseable {
     }
 
 	private void flushBuilders() {
-		for (var entry : builders.entrySet()) {
-			Builder builder = entry.getValue(); MeshData mesh = builder.buffer.build();
-			if (mesh != null) {
-				VertexBuffer vertices = new VertexBuffer(Usage.STATIC);
-				vertices.bind(); vertices.upload(mesh); VertexBuffer.unbind(); layers.add(new Layer(entry.getKey(), vertices));
+		Throwable failure = null;
+		try {
+			for (var entry : builders.entrySet()) {
+				Builder builder = entry.getValue(); MeshData mesh = builder.buffer.build();
+				if (mesh != null) {
+					VertexBuffer vertices = null;
+					boolean uploadStarted = false, retained = false;
+					try {
+						vertices = new VertexBuffer(Usage.STATIC);
+						try {
+							vertices.bind();
+							// Upload takes ownership of the completed mesh on these APIs.
+							if (vertices.isInvalid()) throw new IllegalStateException("Preview vertex buffer is unavailable");
+							com.mojang.blaze3d.systems.RenderSystem.assertOnRenderThread();
+							uploadStarted = true;
+							vertices.upload(mesh);
+						} finally { VertexBuffer.unbind(); }
+						layers.add(new Layer(entry.getKey(), vertices));
+						retained = true;
+					} finally {
+						try { if (!uploadStarted) mesh.close(); }
+						finally { if (!retained && vertices != null) vertices.close(); }
+					}
+				}
 			}
-			builder.close();
+		} catch (RuntimeException | Error error) {
+			failure = error;
+			throw error;
+		} finally {
+			RuntimeException cleanup = null;
+			for (Builder builder : builders.values()) {
+				try { builder.close(); }
+				catch (RuntimeException error) { if (cleanup == null) cleanup = error; else cleanup.addSuppressed(error); }
+			}
+			builders.clear();
+			if (cleanup != null) { if (failure != null) failure.addSuppressed(cleanup); else throw cleanup; }
 		}
-		builders.clear();
 	}
 	/**
 	 * Observation-only placement ghost. Geometry stays in blueprint-local block coordinates;

@@ -71,6 +71,13 @@ def prepare(mc):
         for relative, source in files.items():
             if relative.as_posix() == "fabric.mod.json":
                 continue
+            # The inherited 1.20.x allocation adapters do not apply to the
+            # ByteBufferBuilder API used by all supported NeoForge versions.
+            if relative.as_posix() in (
+                "com/cheatprogram/compat/legacy/LegacyNativeBuffer.java",
+                "com/cheatprogram/mixin/LegacyBufferAccessor.java",
+            ):
+                continue
             destination = output / kind / relative
             destination.parent.mkdir(parents=True, exist_ok=True)
             data = source.read_bytes()

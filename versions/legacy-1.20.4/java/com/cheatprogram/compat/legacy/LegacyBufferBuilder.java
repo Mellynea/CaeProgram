@@ -4,7 +4,7 @@ import com.mojang.blaze3d.vertex.VertexFormat;
 public final class LegacyBufferBuilder extends com.mojang.blaze3d.vertex.BufferBuilder implements LegacyVertexConsumer {
     private boolean pending;
     public LegacyBufferBuilder(int size,VertexFormat.Mode mode,VertexFormat format){super(size);begin(mode,format);}
-    public LegacyBufferBuilder(LegacyByteBufferBuilder memory,VertexFormat.Mode mode,VertexFormat format){this(memory.capacity,mode,format);}
+    public LegacyBufferBuilder(LegacyByteBufferBuilder memory,VertexFormat.Mode mode,VertexFormat format){this(memory.openCapacity(),mode,format);memory.own(this);}
     @Override public LegacyBufferBuilder addVertex(float x,float y,float z){if(pending)endVertex();super.vertex(x,y,z);pending=true;return this;}
     @Override public LegacyBufferBuilder addVertex(org.joml.Matrix4f pose,float x,float y,float z){var p=pose.transformPosition(new org.joml.Vector3f(x,y,z));return addVertex(p.x,p.y,p.z);}
     @Override public LegacyBufferBuilder setColor(int r,int g,int b,int a){super.color(r,g,b,a);return this;}
@@ -22,4 +22,5 @@ public final class LegacyBufferBuilder extends com.mojang.blaze3d.vertex.BufferB
     @Override public LegacyBufferBuilder normal(float x,float y,float z){super.normal(x,y,z);return this;}
     public RenderedBuffer buildOrThrow(){if(pending)endVertex();return end();}
     public RenderedBuffer build(){if(pending)endVertex();return endOrDiscardIfEmpty();}
+    public void abandon(){if(building()){pending=false;RenderedBuffer mesh=super.endOrDiscardIfEmpty();if(mesh!=null)mesh.release();}}
 }

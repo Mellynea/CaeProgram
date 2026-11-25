@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.3fix
+
+- Fix repeated native allocations in the Minecraft 1.20.x HUD renderer and missing cleanup of legacy preview buffers (issue #2).
+- Release preview meshes, GPU buffers and shader resources on failure.
+- Reject overflowed dimensions in damaged building files.
+- See [v1.3fix release notes](docs/releases/v1.3fix.md) for scope and validation.
+
 ## v1.2_fix
 
 Separate corrective release containing the scrolling/native-font clipping and font-state recovery fixes described below, plus source-quality default and 1080p120 projection sharing. Every supported target is packaged independently with project version **1.2_fix**. See the [fix release notes](docs/releases/v1.2_fix.md) for downloads and validation. Existing releases and tags are retained.

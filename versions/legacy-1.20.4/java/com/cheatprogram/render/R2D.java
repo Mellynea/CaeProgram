@@ -327,6 +327,7 @@ public final class R2D {
 		float startX = Math.round(x);
 		float by = Math.round(baseline);
 		LegacyBufferBuilder b = null;
+		try {
 		// Shadow pass first (same buffer, so it stays under the glyphs), then the text itself.
 		int passes = textShadow && (c & 0xFFFFFF) > 0x808080 ? 2 : 1;
 		float width = 0;
@@ -358,6 +359,7 @@ public final class R2D {
 		}
 		if (b != null) drawTextured(b);
 		return width;
+		} finally { if (b != null) b.abandon(); }
 	}
 
 	/** Per-code-point RGB, with one shared opacity. Atlas glyphs remain batched; font choice and pose are unchanged. */
@@ -390,6 +392,7 @@ public final class R2D {
 		int px = Fonts.pixelSize(sizePx);
 		float startX = Math.round(x), by = Math.round(baseline), width = 0;
 		LegacyBufferBuilder buffer = null;
+		try {
 		for (int pass = textShadow ? 1 : 0; pass >= 0; pass--) {
 			boolean shadow = pass == 1;
 			float off = shadow ? Math.max(1, Math.round(px / 14f)) : 0;
@@ -419,6 +422,7 @@ public final class R2D {
 		}
 		if (buffer != null) drawTextured(buffer);
 		return width;
+		} finally { if (buffer != null) buffer.abandon(); }
 	}
 
 	/** Fallback when Java2D is missing from the runtime: Minecraft's own font, scaled to size. */
@@ -431,6 +435,7 @@ public final class R2D {
 		int px = Fonts.pixelSize(sizePx);
 		float startX = Math.round(x), by = Math.round(baseline), width = 0;
 		LegacyBufferBuilder buffer = null;
+		try {
 		for (int pass = textShadow ? 1 : 0; pass >= 0; pass--) {
 			boolean shadow = pass == 1;
 			float off = shadow ? Math.max(1, Math.round(px / 14f)) : 0;
@@ -473,6 +478,7 @@ public final class R2D {
 		}
 		if (buffer != null) drawTextured(buffer);
 		return width;
+		} finally { if (buffer != null) buffer.abandon(); }
 	}
 
 	private static float vanillaSpatialText(Fonts.Face face, String text, float x, float baseline, float sizePx, int alpha,

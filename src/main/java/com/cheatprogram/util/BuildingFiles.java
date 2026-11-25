@@ -154,10 +154,11 @@ public final class BuildingFiles {
 		if(available<2L*1024*1024)throw new IOException("Insufficient memory for building");
 		CompoundTag root = NbtIo.readCompressed(file, NbtAccounter.create(available/2));
 		int[] size = root.getIntArray("size");
-		if (root.getInt("version") != 1 || size.length != 3 || size[0] <= 0 || size[1] <= 0 || size[2] <= 0
-				|| (long) size[0] * size[1] * size[2] > MAX_BLOCKS || !fitsMemory((long)size[0]*size[1]*size[2])) throw new IOException("Invalid building dimensions or insufficient memory");
+		if (root.getInt("version") != 1) throw new IOException("Invalid building version");
+		int blockCount = checkedBlockCount(size);
+		if (!fitsMemory(blockCount)) throw new IOException("Insufficient memory for building");
 		int[] blocks = root.getIntArray("blocks");
-		if (blocks.length != (long) size[0] * size[1] * size[2]) throw new IOException("Invalid block count");
+		if (blocks.length != blockCount) throw new IOException("Invalid block count");
 		ListTag stored = root.getList("palette", Tag.TAG_COMPOUND); List<CompoundTag> palette = new ArrayList<>();
 		if (stored.isEmpty() || stored.size() > MAX_BLOCKS) throw new IOException("Invalid palette");
 		for (int index = 0; index < stored.size(); index++) palette.add(stored.getCompound(index).copy());
@@ -181,6 +182,16 @@ public final class BuildingFiles {
         return new Blueprint(cleanName(name), size[0], size[1], size[2], List.copyOf(palette), blocks,
                 Map.copyOf(entities), projection);
 			}
+	}
+	/** Bound each multiplication before evaluating it, including for damaged or untrusted files. */
+	private static int checkedBlockCount(int[] size) throws IOException {
+		if (size.length != 3) throw new IOException("Invalid building dimensions");
+		int count = 1;
+		for (int dimension : size) {
+			if (dimension <= 0 || count > MAX_BLOCKS / dimension) throw new IOException("Invalid building dimensions");
+			count *= dimension;
+		}
+		return count;
 	}
 	private static Path namedFile(String name) throws IOException {
 		if (name == null || !name.equals(cleanName(name))) throw new IOException("Invalid building name");

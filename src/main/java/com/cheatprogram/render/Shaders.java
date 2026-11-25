@@ -63,17 +63,17 @@ public final class Shaders {
 		ShaderProgramConfig config = ShaderProgramConfig.CODEC
 				.parse(JsonOps.INSTANCE, JsonParser.parseString(read("shaders/core/" + program.name + ".json")))
 				.getOrThrow(IllegalStateException::new);
-		CompiledShader vertex = CompiledShader.compile(config.vertex(), CompiledShader.Type.VERTEX,
+		try (CompiledShader vertex = CompiledShader.compile(config.vertex(), CompiledShader.Type.VERTEX,
 				read("shaders/" + config.vertex().getPath() + ".vsh"));
-		CompiledShader fragment = CompiledShader.compile(config.fragment(), CompiledShader.Type.FRAGMENT,
-				read("shaders/" + config.fragment().getPath() + ".fsh"));
-		try {
+			 CompiledShader fragment = CompiledShader.compile(config.fragment(), CompiledShader.Type.FRAGMENT,
+				read("shaders/" + config.fragment().getPath() + ".fsh"))) {
 			CompiledShaderProgram linked = CompiledShaderProgram.link(vertex, fragment, program.format);
-			linked.setupUniforms(config.uniforms(), config.samplers());
-			return linked;
-		} finally {
-			vertex.close();
-			fragment.close();
+			boolean ready = false;
+			try {
+				linked.setupUniforms(config.uniforms(), config.samplers());
+				ready = true;
+				return linked;
+			} finally { if (!ready) linked.close(); }
 		}
 	}
 

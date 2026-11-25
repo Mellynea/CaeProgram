@@ -1,0 +1,186 @@
+{
+  "sourceHash": "0788310a9c155529b08fa518acf32de4c21490569237a5d22d6833d648b5cb6d",
+  "artifacts": [
+    {
+      "loader": "fabric",
+      "minecraft": "1.20.1",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-fabric-mc1.20.1.jar",
+      "sha256": "cb85e3f0bc8c534336cd142ba20e7b1baf42eef4eda83d77984e987ead67e118",
+      "bytes": 4146549
+    },
+    {
+      "loader": "fabric",
+      "minecraft": "1.20.4",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-fabric-mc1.20.4.jar",
+      "sha256": "10bf3c722ff56b8dac1caf04ddd8bf1f159b55946548f65a9ffada06f387bb6a",
+      "bytes": 4146243
+    },
+    {
+      "loader": "fabric",
+      "minecraft": "1.21.10",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-fabric-mc1.21.10.jar",
+      "sha256": "cb000b4fad975874ffb48bff2731c4432f0bc0478ee62d3145ede1ca0f018d18",
+      "bytes": 4181902
+    },
+    {
+      "loader": "fabric",
+      "minecraft": "1.21.11",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-fabric-mc1.21.11.jar",
+      "sha256": "0a4c46db53e6e360c8504d1a637cac09676f05149c130bec266d4c3c267dc522",
+      "bytes": 4187790
+    },
+    {
+      "loader": "fabric",
+      "minecraft": "1.21.4",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-fabric-mc1.21.4.jar",
+      "sha256": "ed61220bdffd2a02028c14bb9a3b2c003d7b9ea9b02bd4a4370f2dc70df04551",
+      "bytes": 4122434
+    },
+    {
+      "loader": "fabric",
+      "minecraft": "26.1",
+      "version": "1.3fix",
+      "java": 25,
+      "file": "caeduex-v1.3fix-fabric-mc26.1.jar",
+      "sha256": "e1d379108b4f4c880671ba83661a7d8f2230ef901f1d449bcb0b192f379f3f8b",
+      "bytes": 4192636
+    },
+    {
+      "loader": "fabric",
+      "minecraft": "26.1.1",
+      "version": "1.3fix",
+      "java": 25,
+      "file": "caeduex-v1.3fix-fabric-mc26.1.1.jar",
+      "sha256": "166e5ed577b2c15ac94c399174452ea5b55080a7e4ba14775535991f203765b3",
+      "bytes": 4192639
+    },
+    {
+      "loader": "fabric",
+      "minecraft": "26.1.2",
+      "version": "1.3fix",
+      "java": 25,
+      "file": "caeduex-v1.3fix-fabric-mc26.1.2.jar",
+      "sha256": "f6feac2b64344fc36fe7f3cf83f72f236dec6b3b925cea9980a9ca2c80236d91",
+      "bytes": 4192641
+    },
+    {
+      "loader": "fabric",
+      "minecraft": "26.2",
+      "version": "1.3fix",
+      "java": 25,
+      "file": "caeduex-v1.3fix-fabric-mc26.2.jar",
+      "sha256": "dd3ca2c8defbd46af424ef66c9e6313a339d67ee1cb5a44f0ab369ad8164d1f5",
+      "bytes": 4205583
+    },
+    {
+      "loader": "fabric",
+      "minecraft": "26.3",
+      "version": "1.3fix",
+      "java": 25,
+      "file": "caeduex-v1.3fix-fabric-mc26.3.jar",
+      "sha256": "5becb6523cb3e404c94a1a2619dd4343e2125e3d8a6ca27557a84206794081f7",
+      "bytes": 4632065
+    },
+    {
+      "loader": "forge",
+      "minecraft": "1.20.1",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-forge-mc1.20.1.jar",
+      "sha256": "276d37e2f9b964f0359df0e3c27d5692649f5c464d00e640fc605d86101dd06a",
+      "bytes": 4847296
+    },
+    {
+      "loader": "forge",
+      "minecraft": "1.20.4",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-forge-mc1.20.4.jar",
+      "sha256": "dd3c3686a8c3f28ede9bb8397b1f554544da1f1a14773ef2df8ebaeea48f80ae",
+      "bytes": 4847110
+    },
+    {
+      "loader": "forge",
+      "minecraft": "1.21.1",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-forge-mc1.21.1.jar",
+      "sha256": "3d19982464c24cdbe310c7bfc01a82b4e8b27cc148db732849d70a60210c718a",
+      "bytes": 4842063
+    },
+    {
+      "loader": "forge",
+      "minecraft": "1.21.10",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-forge-mc1.21.10.jar",
+      "sha256": "07f961bc220b17a95690e10c2b82f5e4c4e4b39f03b8af04889ad081b7a79f27",
+      "bytes": 4251135
+    },
+    {
+      "loader": "forge",
+      "minecraft": "1.21.11",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-forge-mc1.21.11.jar",
+      "sha256": "aa9a8487c4eeb86c9d87a7aa1e3dde8dd31d3ae9fdfd8478874d9fb0d3cee549",
+      "bytes": 4257084
+    },
+    {
+      "loader": "forge",
+      "minecraft": "26.3",
+      "version": "1.3fix",
+      "java": 25,
+      "file": "caeduex-v1.3fix-forge-mc26.3.jar",
+      "sha256": "2be78730d0c1309445e0ff304f7f2208b0b291dfc29763f8b0fcce7fe837844a",
+      "bytes": 4717420
+    },
+    {
+      "loader": "neoforge",
+      "minecraft": "1.21.1",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-neoforge-mc1.21.1.jar",
+      "sha256": "7c8cdadda516bc6d188a15f0a612f3e8e9b17a0262ddda9b0dfa26c87326468f",
+      "bytes": 4211798
+    },
+    {
+      "loader": "neoforge",
+      "minecraft": "1.21.10",
+      "version": "1.3fix",
+      "java": 21,
+      "file": "caeduex-v1.3fix-neoforge-mc1.21.10.jar",
+      "sha256": "e922cd34e5381f18221e96c673751bb049034ecff9d5516be765030c05f51b20",
+      "bytes": 4251220
+    },
+    {
+      "loader": "neoforge",
+      "minecraft": "26.2",
+      "version": "1.3fix",
+      "java": 25,
+      "file": "caeduex-v1.3fix-neoforge-mc26.2.jar",
+      "sha256": "81a49b5fa3d207e924cc60c4743d18eb5d7f248da9a66e21361b3fa4f3255270",
+      "bytes": 4278032
+    },
+    {
+      "loader": "neoforge",
+      "minecraft": "26.3",
+      "version": "1.3fix",
+      "java": 25,
+      "file": "caeduex-v1.3fix-neoforge-mc26.3.jar",
+      "sha256": "73b16f7a76dfaf01d0d90b43a27f673159fc89157960e0aa9c58750e077f88bb",
+      "bytes": 4717417
+    }
+  ],
+  "gameStarted": false
+}

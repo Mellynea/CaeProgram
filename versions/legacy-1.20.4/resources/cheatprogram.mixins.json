@@ -4,6 +4,7 @@
   "package": "com.cheatprogram.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
+    "LegacyBufferAccessor",
     "WorldPanelTargetMixin",
     "ParticleEffectsEngineMixin",
     "ParticleEffectsFrameMixin",

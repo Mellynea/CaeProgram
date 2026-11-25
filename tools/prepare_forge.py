@@ -17,6 +17,12 @@ for kind in ['java','resources']:
             if source.is_file():files[source.relative_to(layer/kind)]=source
     for relative,source in files.items():
         if relative.as_posix()=='fabric.mod.json':continue
+        # These adapters access the 1.20.x BufferBuilder allocation, which was
+        # replaced by ByteBufferBuilder in 1.21.1 and later.
+        if mc not in ('1.20.1','1.20.4') and relative.as_posix() in (
+            'com/cheatprogram/compat/legacy/LegacyNativeBuffer.java',
+            'com/cheatprogram/mixin/LegacyBufferAccessor.java',
+        ):continue
         path=output/kind/relative;path.parent.mkdir(parents=True,exist_ok=True)
         data=source.read_bytes()
         if path.suffix=='.java':

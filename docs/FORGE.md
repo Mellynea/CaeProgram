@@ -1,15 +1,15 @@
 # Forge builds
 
-CaeDuex v1.3 has separate Forge client artifacts.
+CaeDuex v1.3fix has separate Forge client artifacts.
 
 | Minecraft | Forge build used | Required Java | Artifact |
 | --- | --- | --- | --- |
-| 1.20.1 | 47.4.0 | 21 or newer | `caeduex-v1.3-forge-mc1.20.1.jar` |
-| 1.20.4 | 49.2.13 | 21 or newer | `caeduex-v1.3-forge-mc1.20.4.jar` |
-| 1.21.1 | 52.1.21 | 21 or newer | `caeduex-v1.3-forge-mc1.21.1.jar` |
-| 1.21.10 | 60.1.18 | 21 or newer | `caeduex-v1.3-forge-mc1.21.10.jar` |
-| 1.21.11 | 61.2.5 | 21 or newer | `caeduex-v1.3-forge-mc1.21.11.jar` |
-| 26.3 | 66.1.5 | 25 or newer | `caeduex-v1.3-forge-mc26.3.jar` |
+| 1.20.1 | 47.4.0 | 21 or newer | `caeduex-v1.3fix-forge-mc1.20.1.jar` |
+| 1.20.4 | 49.2.13 | 21 or newer | `caeduex-v1.3fix-forge-mc1.20.4.jar` |
+| 1.21.1 | 52.1.21 | 21 or newer | `caeduex-v1.3fix-forge-mc1.21.1.jar` |
+| 1.21.10 | 60.1.18 | 21 or newer | `caeduex-v1.3fix-forge-mc1.21.10.jar` |
+| 1.21.11 | 61.2.5 | 21 or newer | `caeduex-v1.3fix-forge-mc1.21.11.jar` |
+| 26.3 | 66.1.5 | 25 or newer | `caeduex-v1.3fix-forge-mc26.3.jar` |
 
 The Forge dependency ranges stay within their respective loader major versions. Use the matching loader and Minecraft version, and install one CaeDuex JAR in the instance's `mods` folder. Configuration remains local under `config/cheatprogram-open/`.
 
